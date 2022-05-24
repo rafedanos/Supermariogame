@@ -1,5 +1,5 @@
-import SpriteSheet from './SpriteSheet.js';
-import {loadImage, loadLevel} from './loaders.js'
+import {loadLevel} from './loaders.js'
+import {loadMarioSprite, loadBackgroundSprites} from './sprites.js';
 
 function drawBackground(background, context, sprites) {
     background.ranges.forEach(([x1, x2, y1, y2]) => {
@@ -10,6 +10,8 @@ function drawBackground(background, context, sprites) {
         }
     });
 }
+
+
 // creating objects for canvas, screen comes from index.html, second line defines the rectangle
 const canvas = document.getElementById('screen');
 const context = canvas.getContext('2d');
